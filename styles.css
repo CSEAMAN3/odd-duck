@@ -1,0 +1,218 @@
+html {
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--grn);
+}
+
+:root {
+  --wht: #f1f1f1;
+  --grn: #0f3d3e;
+  --crm: #e2dcc8;
+  --blk: #0e1111;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*::before {
+  box-sizing: border-box;
+}
+
+*::after {
+  box-sizing: border-box;
+}
+
+/******************************* 
+Generic Elements
+********************************/
+
+body {
+  min-width: 320px;
+  background-color: var(--wht);
+}
+
+.main-text {
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 1.6;
+  color: var(--blk);
+  margin-bottom: 1em;
+}
+
+li {
+  margin: 1em 0;
+}
+
+/******************************* 
+Images
+********************************/
+
+img {
+  width: 100%;
+  display: block;
+  cursor: pointer;
+}
+
+#img1,
+#img2,
+#img3 {
+  border: 2px solid var(--grn);
+  border-radius: 2px;
+  margin-bottom: 1em;
+  transform: scale(1);
+  transition: 0.25s transform ease;
+}
+
+#img1:hover,
+#img2:hover,
+#img3:hover {
+  transform: scale(1.05);
+}
+
+/******************************* 
+Buttons
+********************************/
+
+#results-btn {
+  text-transform: capitalize;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--wht);
+  background-color: var(--grn);
+  border: 2px solid var(--grn);
+  border-radius: 2px;
+  padding: 1em 2em;
+  cursor: pointer;
+  transform: scale(1);
+  transition: 0.25s color ease, 0.5s transform ease;
+}
+
+#results-btn:hover {
+  background-color: transparent;
+  color: var(--grn);
+  transform: scale(1.03);
+}
+
+/******************************* 
+Typography
+********************************/
+
+.header-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: var(--wht);
+}
+
+.main-heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: var(--grn);
+  margin-bottom: 0.5em;
+}
+
+.main-text {
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 1.6;
+  color: var(--blk);
+  margin-bottom: 1.5em;
+}
+
+.aside-title {
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: var(--grn);
+  position: relative;
+}
+
+.copyright {
+  text-transform: capitalize;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: var(--wht);
+}
+
+/******************************* 
+Layout
+********************************/
+
+header,
+main,
+footer {
+  width: 100%;
+}
+
+.header-container,
+.main-container,
+.footer-container {
+  max-width: 1024px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+header {
+  background-color: var(--grn);
+  padding: 2em 0;
+  margin-bottom: 2em;
+}
+
+.main-container {
+  margin-bottom: 2rem;
+}
+
+.img-content-container {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.img-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.button-container {
+  margin-bottom: 2rem;
+}
+
+footer {
+  background-color: var(--grn);
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  padding: 3rem 0;
+}
+
+/******************************* 
+Media Queries
+********************************/
+
+@media (min-width: 700px) {
+  .img-content-container {
+    flex-direction: column;
+  }
+
+  .img-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  #img1,
+  #img2,
+  #img3 {
+    width: 30%;
+  }
+}
