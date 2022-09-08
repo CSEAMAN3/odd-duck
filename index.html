@@ -17,15 +17,25 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/4d353b9c2f.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header>
       <div class="header-container">
-        <div class="logo-container"></div>
-        <h1 class="header-title">Odd Duck Product Picker</h1>
+        <div class="logo-container">
+          <h1 class="header-title">Odd Duck Product Picker</h1>
+        </div>
+        <div class="theme-button-container">
+          <button id="theme-btn">
+            <i id="btn-icon" class="fa-solid fa-sun"></i>
+          </button>
+        </div>
       </div>
     </header>
-    <main>
+    <main id="main" class="light">
       <div class="main-container">
         <div class="img-content-container">
           <div id="img-container" class="img-container">
@@ -44,12 +54,16 @@
           </div>
         </div>
         <div class="button-container">
-          <button id="results-btn">view results</button>
+          <button id="results-btn" class="btn">view results</button>
+          <button id="delete-btn" class="btn">Delete Data</button>
         </div>
-        <aside>
+        <!-- <aside>
           <h2 class="aside-title">Results</h2>
           <ul id="results-list"></ul>
-        </aside>
+        </aside> -->
+      </div>
+      <div class="chart-container">
+        <canvas id="myChart"></canvas>
       </div>
     </main>
     <footer>
@@ -57,7 +71,9 @@
         <p class="copyright">&#169; odd duck products</p>
       </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
     <script src="app.js"></script>
     <!-- <script src="test.js"></script> -->
+    <!-- <script src="testtwo.js"></script> -->
   </body>
 </html>

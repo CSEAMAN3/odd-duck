@@ -60,6 +60,7 @@ img {
 #img1,
 #img2,
 #img3 {
+  width: 30%;
   border: 2px solid var(--grn);
   border-radius: 2px;
   margin-bottom: 1em;
@@ -73,11 +74,17 @@ img {
   transform: scale(1.05);
 }
 
+.fa-sun,
+.fa-moon {
+  font-size: 1.5rem;
+  color: var(--wht);
+}
+
 /******************************* 
 Buttons
 ********************************/
 
-#results-btn {
+.btn {
   text-transform: capitalize;
   font-family: inherit;
   font-size: 1rem;
@@ -93,10 +100,33 @@ Buttons
   transition: 0.25s color ease, 0.5s transform ease;
 }
 
-#results-btn:hover {
+.btn:hover {
   background-color: transparent;
   color: var(--grn);
   transform: scale(1.03);
+}
+
+.dark .btn {
+  color: var(--grn);
+  background-color: var(--wht);
+  border: 2px solid var(--wht);
+}
+
+.dark .btn:hover {
+  background-color: transparent;
+  color: var(--wht);
+}
+
+#theme-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transform: scale(1);
+  transition: 0.25s transform ease;
+}
+
+#theme-btn:hover {
+  transform: scale(1.1);
 }
 
 /******************************* 
@@ -128,12 +158,32 @@ Typography
 }
 
 .aside-title {
+  display: inline-back;
+  position: relative;
   text-transform: capitalize;
   font-size: 1.2rem;
   font-weight: 700;
   letter-spacing: 0.01em;
   color: var(--grn);
   position: relative;
+}
+
+.aside-title:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--grn);
+  transform-origin: bottom-right;
+  transition: transform 0.25s ease-out;
+}
+
+.aside-title:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom-left;
 }
 
 .copyright {
@@ -164,7 +214,28 @@ footer {
 header {
   background-color: var(--grn);
   padding: 2em 0;
-  margin-bottom: 2em;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main {
+  padding-top: 2rem;
+}
+
+.light {
+  background-color: var(--wht);
+}
+
+.dark {
+  background-color: var(--grn);
+}
+
+.dark .main-text {
+  color: var(--wht);
 }
 
 .main-container {
@@ -178,7 +249,8 @@ header {
 
 .img-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
   margin-bottom: 1rem;
 }
 
@@ -194,6 +266,12 @@ footer {
   display: flex;
   justify-content: center;
   padding: 3rem 0;
+}
+
+.chart-container {
+  max-width: 1024px;
+  margin: 0 auto;
+  width: 90%;
 }
 
 /******************************* 
@@ -214,5 +292,11 @@ Media Queries
   #img2,
   #img3 {
     width: 30%;
+  }
+
+  #img1:hover,
+  #img2:hover,
+  #img3:hover {
+    transform: scale(1.1);
   }
 }
