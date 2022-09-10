@@ -223,7 +223,7 @@ header {
 }
 
 main {
-  padding-top: 2rem;
+  padding: 2rem 0 0 0;
 }
 
 .light {
@@ -236,10 +236,6 @@ main {
 
 .dark .main-text {
   color: var(--wht);
-}
-
-.main-container {
-  margin-bottom: 2rem;
 }
 
 .img-content-container {
